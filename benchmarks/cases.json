@@ -1,0 +1,486 @@
+[
+  {
+    "id": "ALFA-revenue_growth",
+    "request": {
+      "question": "Analyze revenue growth",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ALFA:revenue_growth": 25.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ALFA-operating_margin",
+    "request": {
+      "question": "Analyze operating margin",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ALFA:operating_margin": 20.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ALFA-debt_to_equity",
+    "request": {
+      "question": "Analyze debt to equity",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ALFA:debt_to_equity": 0.5
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ALFA-free_cash_flow",
+    "request": {
+      "question": "Analyze free cash flow",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ALFA:free_cash_flow": 22.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "BETA-revenue_growth",
+    "request": {
+      "question": "Analyze revenue growth",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "BETA:revenue_growth": -10.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "BETA-operating_margin",
+    "request": {
+      "question": "Analyze operating margin",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "BETA:operating_margin": 5.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "BETA-debt_to_equity",
+    "request": {
+      "question": "Analyze debt to equity",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "BETA:debt_to_equity": 1.5
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "BETA-free_cash_flow",
+    "request": {
+      "question": "Analyze free cash flow",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "BETA:free_cash_flow": 6.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ZERO-revenue_growth",
+    "request": {
+      "question": "Analyze revenue growth",
+      "symbols": [
+        "ZERO"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ZERO:revenue_growth": null
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": false
+    }
+  },
+  {
+    "id": "ZERO-operating_margin",
+    "request": {
+      "question": "Analyze operating margin",
+      "symbols": [
+        "ZERO"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ZERO:operating_margin": -10.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ZERO-debt_to_equity",
+    "request": {
+      "question": "Analyze debt to equity",
+      "symbols": [
+        "ZERO"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ZERO:debt_to_equity": null
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": false
+    }
+  },
+  {
+    "id": "ZERO-free_cash_flow",
+    "request": {
+      "question": "Analyze free cash flow",
+      "symbols": [
+        "ZERO"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ZERO:free_cash_flow": -3.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ALFA-risk",
+    "request": {
+      "question": "Retrieve risk factors",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "documents"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ALFA-price",
+    "request": {
+      "question": "Retrieve daily close price",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "market"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "BETA-risk",
+    "request": {
+      "question": "Retrieve risk factors",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "documents"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "BETA-price",
+    "request": {
+      "question": "Retrieve daily close price",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "market"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ZERO-risk",
+    "request": {
+      "question": "Retrieve risk factors",
+      "symbols": [
+        "ZERO"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "documents"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "ZERO-price",
+    "request": {
+      "question": "Retrieve daily close price",
+      "symbols": [
+        "ZERO"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "market"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "comparison",
+    "request": {
+      "question": "Compare revenue growth and operating margin",
+      "symbols": [
+        "ALFA",
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ALFA:revenue_growth": 25.0,
+        "ALFA:operating_margin": 20.0,
+        "BETA:revenue_growth": -10.0,
+        "BETA:operating_margin": 5.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "all-tools",
+    "request": {
+      "question": "Analyze revenue growth, risk factors and market price",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "ALFA:revenue_growth": 25.0
+      },
+      "tools": [
+        "sql",
+        "documents",
+        "market"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "early-single-year",
+    "request": {
+      "question": "Analyze revenue growth",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2024-03-01"
+    },
+    "expected": {
+      "values": {
+        "ALFA:revenue_growth": null
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": false
+    }
+  },
+  {
+    "id": "no-eligible-docs",
+    "request": {
+      "question": "Retrieve risk factors",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2023-01-01"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "documents"
+      ],
+      "accepted": false
+    }
+  },
+  {
+    "id": "future-quote",
+    "request": {
+      "question": "Retrieve daily close price",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2025-02-01"
+    },
+    "expected": {
+      "values": {},
+      "tools": [
+        "market"
+      ],
+      "accepted": false
+    }
+  },
+  {
+    "id": "unknown-symbol",
+    "request": {
+      "question": "Analyze operating margin",
+      "symbols": [
+        "MISSING"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "expected": {
+      "values": {
+        "MISSING:operating_margin": null
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": false
+    }
+  },
+  {
+    "id": "early-margin",
+    "request": {
+      "question": "Analyze operating margin",
+      "symbols": [
+        "ALFA"
+      ],
+      "as_of": "2024-03-01"
+    },
+    "expected": {
+      "values": {
+        "ALFA:operating_margin": 15.0
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  },
+  {
+    "id": "early-debt",
+    "request": {
+      "question": "Analyze debt to equity",
+      "symbols": [
+        "BETA"
+      ],
+      "as_of": "2024-03-01"
+    },
+    "expected": {
+      "values": {
+        "BETA:debt_to_equity": 0.9
+      },
+      "tools": [
+        "sql"
+      ],
+      "accepted": true
+    }
+  }
+]

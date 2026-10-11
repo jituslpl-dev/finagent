@@ -1,0 +1,11 @@
+.git
+.venv
+runtime
+reports
+tests
+work
+*.sqlite*
+*.db*
+**/__pycache__
+.env
+.coverage

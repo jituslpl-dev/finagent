@@ -1,0 +1,352 @@
+{
+  "mode": "offline deterministic orchestration; fictional gold fixtures",
+  "case_count": 26,
+  "pass_rate": 1.0,
+  "routing_accuracy": 1.0,
+  "acceptance_abstention_accuracy": 1.0,
+  "citation_reference_validity": 1.0,
+  "numeric_comparison_count": 17,
+  "numeric_mae": 0.0,
+  "numeric_rmse": 0.0,
+  "max_absolute_error": 0.0,
+  "as_of_violation_count": 0,
+  "latency_p95_ms": 79.27989994641393,
+  "limitations": [
+    "Not an LLM quality benchmark; no paid API calls occur.",
+    "Citation reference validity is not semantic fact-checking accuracy.",
+    "Small hand-authored fixtures and local latency do not establish production performance."
+  ],
+  "cases": [
+    {
+      "id": "ALFA-revenue_growth",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 79.27989994641393,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ALFA-operating_margin",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 29.144000029191375,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ALFA-debt_to_equity",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 33.229999942705035,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ALFA-free_cash_flow",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 29.152899980545044,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "BETA-revenue_growth",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 31.81750001385808,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "BETA-operating_margin",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 32.775399973616004,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "BETA-debt_to_equity",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 31.982499989680946,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "BETA-free_cash_flow",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 33.729400020092726,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ZERO-revenue_growth",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 42.01340000145137,
+      "accepted": false,
+      "issues": [
+        "Requested financial metric lacks defined evidence",
+        "No supported findings"
+      ]
+    },
+    {
+      "id": "ZERO-operating_margin",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 31.974200042895973,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ZERO-debt_to_equity",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 43.65260002668947,
+      "accepted": false,
+      "issues": [
+        "Requested financial metric lacks defined evidence",
+        "No supported findings"
+      ]
+    },
+    {
+      "id": "ZERO-free_cash_flow",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 39.9378000292927,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ALFA-risk",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 123.5721999546513,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ALFA-price",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 33.168200054205954,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "BETA-risk",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 44.07329997047782,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "BETA-price",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 31.40850004274398,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ZERO-risk",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 41.976200067438185,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "ZERO-price",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 31.941000022925436,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "comparison",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 35.69340007379651,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "all-tools",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 42.96390002127737,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "early-single-year",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 41.99169995263219,
+      "accepted": false,
+      "issues": [
+        "Requested financial metric lacks defined evidence",
+        "No supported findings"
+      ]
+    },
+    {
+      "id": "no-eligible-docs",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 45.25399999693036,
+      "accepted": false,
+      "issues": [
+        "No supported findings",
+        "Missing documents evidence for BETA"
+      ]
+    },
+    {
+      "id": "future-quote",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 50.1568999607116,
+      "accepted": false,
+      "issues": [
+        "No supported findings",
+        "Missing market evidence for ALFA"
+      ]
+    },
+    {
+      "id": "unknown-symbol",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 52.79360001441091,
+      "accepted": false,
+      "issues": [
+        "Requested financial metric lacks defined evidence",
+        "No supported findings",
+        "Missing sql evidence for MISSING"
+      ]
+    },
+    {
+      "id": "early-margin",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 33.003500080667436,
+      "accepted": true,
+      "issues": []
+    },
+    {
+      "id": "early-debt",
+      "passed": true,
+      "numeric_ok": true,
+      "routing_ok": true,
+      "decision_ok": true,
+      "citation_ok": true,
+      "as_of_ok": true,
+      "latency_ms": 26.734399958513677,
+      "accepted": true,
+      "issues": []
+    }
+  ]
+}

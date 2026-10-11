@@ -1,0 +1,399 @@
+{
+  "thread": "documented-demo",
+  "paused": false,
+  "report": {
+    "request": {
+      "question": "Compare revenue growth, operating margin, debt, cash flow, risk factors and price",
+      "symbols": [
+        "ALFA",
+        "BETA"
+      ],
+      "as_of": "2025-03-05"
+    },
+    "plan": {
+      "tools": [
+        "sql",
+        "documents",
+        "market"
+      ],
+      "metrics": [
+        "revenue_growth",
+        "operating_margin",
+        "debt_to_equity",
+        "free_cash_flow"
+      ],
+      "rationale": "Bounded keyword routing; tools match the requested evidence types."
+    },
+    "evidence": [
+      {
+        "id": "cdc9d0735437932e9060",
+        "kind": "sql",
+        "symbol": "ALFA",
+        "available_on": "2025-02-01",
+        "source": "sqlite:fundamentals/ALFA/2024",
+        "payload": {
+          "symbol": "ALFA",
+          "period": 2024,
+          "available_on": "2025-02-01",
+          "revenue": 125.0,
+          "operating_income": 25.0,
+          "debt": 45.0,
+          "equity": 90.0,
+          "operating_cash_flow": 30.0,
+          "capex": 8.0
+        }
+      },
+      {
+        "id": "32e3d9616c68f041fab9",
+        "kind": "sql",
+        "symbol": "ALFA",
+        "available_on": "2024-02-01",
+        "source": "sqlite:fundamentals/ALFA/2023",
+        "payload": {
+          "symbol": "ALFA",
+          "period": 2023,
+          "available_on": "2024-02-01",
+          "revenue": 100.0,
+          "operating_income": 15.0,
+          "debt": 40.0,
+          "equity": 80.0,
+          "operating_cash_flow": 20.0,
+          "capex": 5.0
+        }
+      },
+      {
+        "id": "6b2318cf5c0e8b701da7",
+        "kind": "sql",
+        "symbol": "BETA",
+        "available_on": "2025-02-15",
+        "source": "sqlite:fundamentals/BETA/2024",
+        "payload": {
+          "symbol": "BETA",
+          "period": 2024,
+          "available_on": "2025-02-15",
+          "revenue": 180.0,
+          "operating_income": 9.0,
+          "debt": 120.0,
+          "equity": 80.0,
+          "operating_cash_flow": 18.0,
+          "capex": 12.0
+        }
+      },
+      {
+        "id": "0b493976bdcdec0091e4",
+        "kind": "sql",
+        "symbol": "BETA",
+        "available_on": "2024-02-15",
+        "source": "sqlite:fundamentals/BETA/2023",
+        "payload": {
+          "symbol": "BETA",
+          "period": 2023,
+          "available_on": "2024-02-15",
+          "revenue": 200.0,
+          "operating_income": 20.0,
+          "debt": 90.0,
+          "equity": 100.0,
+          "operating_cash_flow": 25.0,
+          "capex": 10.0
+        }
+      },
+      {
+        "id": "fd37e0638aa5ea503170",
+        "kind": "documents",
+        "symbol": "ALFA",
+        "available_on": "2025-02-01",
+        "source": "fictional:ALFA/2024/risk",
+        "payload": {
+          "text": "ALFA risk factors: customer concentration and supplier disruptions can reduce profitability. Management describes recurring subscription revenue and international expansion.",
+          "document_id": "alfa-risk",
+          "score": 0.29972406155737497
+        }
+      },
+      {
+        "id": "8c86539dfd411866db6e",
+        "kind": "documents",
+        "symbol": "ALFA",
+        "available_on": "2024-02-01",
+        "source": "fictional:ALFA/2023/risk",
+        "payload": {
+          "text": "ALFA risk factors: foreign exchange exposure and dependency on a single supplier.",
+          "document_id": "alfa-old",
+          "score": 0.25541466006708635
+        }
+      },
+      {
+        "id": "5b30603ed663b5d57ec2",
+        "kind": "documents",
+        "symbol": "BETA",
+        "available_on": "2025-02-15",
+        "source": "fictional:BETA/2024/risk",
+        "payload": {
+          "text": "BETA risk factors: refinancing debt, weakening demand and interest expense. Management reports a restructuring program.",
+          "document_id": "beta-risk",
+          "score": 0.4170288281141496
+        }
+      },
+      {
+        "id": "a3edfddffe5c0b5c2e73",
+        "kind": "market",
+        "symbol": "ALFA",
+        "available_on": "2025-03-03",
+        "source": "fictional:daily-close",
+        "payload": {
+          "date": "2025-03-03",
+          "close": 42.0,
+          "currency": "USD"
+        }
+      },
+      {
+        "id": "8b73a469dd3131ae09ad",
+        "kind": "market",
+        "symbol": "BETA",
+        "available_on": "2025-03-03",
+        "source": "fictional:daily-close",
+        "payload": {
+          "date": "2025-03-03",
+          "close": 18.5,
+          "currency": "USD"
+        }
+      }
+    ],
+    "calculations": [
+      {
+        "symbol": "ALFA",
+        "metric": "revenue_growth",
+        "value": 25.0,
+        "unit": "percent",
+        "evidence_ids": [
+          "cdc9d0735437932e9060",
+          "32e3d9616c68f041fab9"
+        ],
+        "reason": null
+      },
+      {
+        "symbol": "ALFA",
+        "metric": "operating_margin",
+        "value": 20.0,
+        "unit": "percent",
+        "evidence_ids": [
+          "cdc9d0735437932e9060"
+        ],
+        "reason": null
+      },
+      {
+        "symbol": "ALFA",
+        "metric": "debt_to_equity",
+        "value": 0.5,
+        "unit": "ratio",
+        "evidence_ids": [
+          "cdc9d0735437932e9060"
+        ],
+        "reason": null
+      },
+      {
+        "symbol": "ALFA",
+        "metric": "free_cash_flow",
+        "value": 22.0,
+        "unit": "USD million",
+        "evidence_ids": [
+          "cdc9d0735437932e9060"
+        ],
+        "reason": null
+      },
+      {
+        "symbol": "BETA",
+        "metric": "revenue_growth",
+        "value": -10.0,
+        "unit": "percent",
+        "evidence_ids": [
+          "6b2318cf5c0e8b701da7",
+          "0b493976bdcdec0091e4"
+        ],
+        "reason": null
+      },
+      {
+        "symbol": "BETA",
+        "metric": "operating_margin",
+        "value": 5.0,
+        "unit": "percent",
+        "evidence_ids": [
+          "6b2318cf5c0e8b701da7"
+        ],
+        "reason": null
+      },
+      {
+        "symbol": "BETA",
+        "metric": "debt_to_equity",
+        "value": 1.5,
+        "unit": "ratio",
+        "evidence_ids": [
+          "6b2318cf5c0e8b701da7"
+        ],
+        "reason": null
+      },
+      {
+        "symbol": "BETA",
+        "metric": "free_cash_flow",
+        "value": 6.0,
+        "unit": "USD million",
+        "evidence_ids": [
+          "6b2318cf5c0e8b701da7"
+        ],
+        "reason": null
+      }
+    ],
+    "narrative": {
+      "findings": [
+        {
+          "text": "ALFA risk factors: customer concentration and supplier disruptions can reduce profitability. Management describes recurring subscription revenue and international expansion.",
+          "evidence_ids": [
+            "fd37e0638aa5ea503170"
+          ]
+        },
+        {
+          "text": "ALFA risk factors: foreign exchange exposure and dependency on a single supplier.",
+          "evidence_ids": [
+            "8c86539dfd411866db6e"
+          ]
+        },
+        {
+          "text": "BETA risk factors: refinancing debt, weakening demand and interest expense. Management reports a restructuring program.",
+          "evidence_ids": [
+            "5b30603ed663b5d57ec2"
+          ]
+        },
+        {
+          "text": "ALFA daily close on 2025-03-03: 42.0000 USD.",
+          "evidence_ids": [
+            "a3edfddffe5c0b5c2e73"
+          ]
+        },
+        {
+          "text": "BETA daily close on 2025-03-03: 18.5000 USD.",
+          "evidence_ids": [
+            "8b73a469dd3131ae09ad"
+          ]
+        },
+        {
+          "text": "ALFA revenue_growth: 25 percent.",
+          "evidence_ids": [
+            "cdc9d0735437932e9060",
+            "32e3d9616c68f041fab9"
+          ]
+        },
+        {
+          "text": "ALFA operating_margin: 20 percent.",
+          "evidence_ids": [
+            "cdc9d0735437932e9060"
+          ]
+        },
+        {
+          "text": "ALFA debt_to_equity: 0.5 ratio.",
+          "evidence_ids": [
+            "cdc9d0735437932e9060"
+          ]
+        },
+        {
+          "text": "ALFA free_cash_flow: 22 USD million.",
+          "evidence_ids": [
+            "cdc9d0735437932e9060"
+          ]
+        },
+        {
+          "text": "BETA revenue_growth: -10 percent.",
+          "evidence_ids": [
+            "6b2318cf5c0e8b701da7",
+            "0b493976bdcdec0091e4"
+          ]
+        },
+        {
+          "text": "BETA operating_margin: 5 percent.",
+          "evidence_ids": [
+            "6b2318cf5c0e8b701da7"
+          ]
+        },
+        {
+          "text": "BETA debt_to_equity: 1.5 ratio.",
+          "evidence_ids": [
+            "6b2318cf5c0e8b701da7"
+          ]
+        },
+        {
+          "text": "BETA free_cash_flow: 6 USD million.",
+          "evidence_ids": [
+            "6b2318cf5c0e8b701da7"
+          ]
+        }
+      ],
+      "limitations": [
+        "Research evidence is limited to the selected sources and their availability dates.",
+        "Financial ratios are descriptive; this workflow does not execute trades or estimate investment returns.",
+        "Document findings are extractive evidence, not independently established causal conclusions."
+      ]
+    },
+    "verification": {
+      "accepted": true,
+      "issues": [],
+      "checks": [
+        "schema",
+        "as_of",
+        "scope",
+        "arithmetic",
+        "citation_support",
+        "tool_coverage"
+      ]
+    },
+    "tool_events": [
+      {
+        "tool": "sql",
+        "symbol": "ALFA",
+        "attempts": 1,
+        "ok": true,
+        "error": null
+      },
+      {
+        "tool": "sql",
+        "symbol": "BETA",
+        "attempts": 1,
+        "ok": true,
+        "error": null
+      },
+      {
+        "tool": "documents",
+        "symbol": "ALFA",
+        "attempts": 1,
+        "ok": true,
+        "error": null
+      },
+      {
+        "tool": "documents",
+        "symbol": "BETA",
+        "attempts": 1,
+        "ok": true,
+        "error": null
+      },
+      {
+        "tool": "market",
+        "symbol": "ALFA",
+        "attempts": 1,
+        "ok": true,
+        "error": null
+      },
+      {
+        "tool": "market",
+        "symbol": "BETA",
+        "attempts": 1,
+        "ok": true,
+        "error": null
+      }
+    ],
+    "trajectory": [
+      "planner",
+      "retriever",
+      "analyst",
+      "verifier"
+    ],
+    "analysis_attempts": 1,
+    "mode": "offline"
+  }
+}

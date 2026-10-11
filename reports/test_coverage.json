@@ -1,0 +1,8 @@
+{
+  "tests_passed": 20,
+  "statement_coverage_percent": 93.93939393939394,
+  "covered_statements": 589,
+  "total_statements": 627,
+  "platform": "Windows Python 3.12.14",
+  "command": "python -m pytest -q --cov=finagent --cov-report=term-missing"
+}

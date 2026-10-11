@@ -1,0 +1,44 @@
+name: Tests, research benchmarks and container
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements-lock.txt -r requirements-dev.txt
+      - run: python -m pip install --no-deps -e .
+      - run: ruff check src tests scripts
+      - run: ruff format --check src tests scripts
+      - run: python -m pytest -q --cov=finagent --cov-report=term-missing --cov-report=json
+      - run: finagent benchmark --output reports/ci-benchmark.json
+      - run: finagent research --thread ci-demo --output reports/ci-demo.json
+      - uses: actions/upload-artifact@v7
+        with:
+          name: evidence-${{ matrix.os }}
+          path: |
+            reports/ci-*.json
+            coverage.json
+          if-no-files-found: error
+  docker:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - run: docker build -t finagent:ci .
+      - run: docker run -d --name finagent-ci --read-only --tmpfs /tmp --tmpfs /data:uid=10001,gid=10001 --cap-drop ALL --security-opt no-new-privileges -p 127.0.0.1:8000:8000 -e FINAGENT_API_KEY=ci-secret-at-least-sixteen finagent:ci
+      - run: python scripts/api_smoke.py --key ci-secret-at-least-sixteen
+      - if: always()
+        run: docker logs finagent-ci
